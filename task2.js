@@ -3,15 +3,15 @@ function puddle(arr){
     let left = 0;
     let puddle = 0;
 
-    let leftPointer = 0;
-    let rightPointer = 0;
+    let left_pointer = 0;
+    let right_pointer = 0;
 
     while (left < right) {
         if (arr[left] < arr[right]) {
-            arr[left] >= leftPointer ? leftPointer = arr[left] : puddle += leftPointer - arr[left];
+            arr[left] >= left_pointer ? left_pointer = arr[left] : puddle += left_pointer - arr[left];
             ++left;
         } else {
-            arr[right] >= rightPointer ? rightPointer = arr[right] : puddle += rightPointer - arr[right];
+            arr[right] >= right_pointer ? right_pointer = arr[right] : puddle += right_pointer - arr[right];
             --right;
         }
     }

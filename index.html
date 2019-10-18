@@ -4,12 +4,24 @@
 	<title>Lektorium HW2</title>
 	<meta http-equiv="content-language" content="en" />
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
     <script src="task1.js"></script>
     <script src="task2.js"></script>
-    <script src="task3.js"></script>
-    <script src="task4.js"></script>
+    <script src="task3.js" defer></script>
+    <script src="task4.js" defer></script>
 </head>
 <body>
+    <h2>Завдання 3</h2>
+    Ціна: <input id="task3_form1"><br/>
+    Купюра: <input id="task3_form2"><br/>
+    <button id="submit3">Відправити</button>
+
+    <div id="result3"></div>
+    <h2>Завдання 4</h2>
+    <div class="spinning_dio">
+        <img src="assets/dio.png" alt="dio" id="dio" onclick="dioFunction()">
+        <div>D<span id="counter">I</span>O</div>
+    </div>
 </body>
 </html>

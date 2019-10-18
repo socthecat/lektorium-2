@@ -1,0 +1,18 @@
+.spinning_dio {
+    width: 200px;
+    margin: 0 auto;
+}
+#dio {
+    width: 200px;
+    height: auto;
+    background-color: yellow;
+    border-radius: 50%;
+}
+.spinning_dio div {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+#dio:active {
+    zoom: 1.1;
+}
