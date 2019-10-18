@@ -1,2 +1,2 @@
 # lektorium-2
-TBD
+https://socthecat.github.io/lektorium-2/
