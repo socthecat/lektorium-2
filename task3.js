@@ -4,7 +4,7 @@ function task3() {
     const price = parseInt(document.getElementById('task3_form1').value);
     const banknote = parseInt(document.getElementById('task3_form2').value);
     const banknote_arr = [1, 2, 5, 10, 20, 50, 100];
-    let change = banknote - price;
+    let change = (banknote > price) ? (banknote - price) : location.reload();
     let arr2 = banknote_arr.reverse();
     
     function changeCalculator(change, count, result) {
@@ -24,7 +24,7 @@ function task3() {
                 }
             }
 
-            if (change_temp == 0) {
+            if (change_temp === 0) {
                 console.log(result_temp);
             }
         }

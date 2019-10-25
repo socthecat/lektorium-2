@@ -2,10 +2,10 @@ function arrMath(mode, arr) {
     let temparr = arr.filter((a) => !isNaN(a));
     switch (mode) {
         case 'min':
-            return temparr.reduce((a, b) => Math.min(a, b));
+            return temparr.reduce((a, b) => (a > b) ? b : a);
             break;
         case 'max':
-            return temparr.reduce((a, b) => Math.max(a, b));
+            return temparr.reduce((a, b) => (a > b) ? a : b);
             break;
         case 'sum':
             return temparr.reduce((a, b) => a + b);
