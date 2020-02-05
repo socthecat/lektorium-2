@@ -17,5 +17,6 @@ let X = rect.left + rect.width / 2;
 let Y = rect.top + rect.height / 2;
 
 addEventListener("mousemove", function(event) {
-    dio.style.transform = "rotate(" + Math.atan2(event.clientY - Y, event.clientX - X) + "rad)";
+    // https://en.wikipedia.org/wiki/Atan2
+    dio.style.transform = "rotate(" + Math.atan2(Y - event.clientY, X - event.clientX) + "rad)";
 });
