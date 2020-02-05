@@ -1,35 +1,35 @@
-console.log("### TASK 3 ###");
+console.log('### TASK 3 ###')
 
-function task3() {
-    const price = parseInt(document.getElementById('task3_form1').value);
-    const banknote = parseInt(document.getElementById('task3_form2').value);
-    const banknote_arr = [1, 2, 5, 10, 20, 50, 100];
-    let change = (banknote > price) ? (banknote - price) : location.reload();
-    let arr2 = banknote_arr.reverse();
-    
-    function changeCalculator(change, count, result) {
-        for (i = count; i < arr2.length; i++) {
-            let change_temp = change;
-            let result_temp = result;
+function task3 () {
+  const price = parseInt(document.getElementById('task3_form1').value)
+  const banknote = parseInt(document.getElementById('task3_form2').value)
+  const banknoteArr = [1, 2, 5, 10, 20, 50, 100]
+  const change = (banknote > price) ? (banknote - price) : location.reload()
+  const arr2 = banknoteArr.reverse()
 
-            while (change_temp > 0) {
-                if (result_temp !== "") {
-                    result_temp += " + ";
-                }
-                result_temp += arr2[i];
-                change_temp -= arr2[i];
+  function changeCalculator (change, count, result) {
+    for (let i = count; i < arr2.length; i++) {
+      let changeTemp = change
+      let resultTemp = result
 
-                if (change_temp > 0) {
-                    changeCalculator(change_temp, i + 1, result_temp);
-                }
-            }
-
-            if (change_temp === 0) {
-                console.log(result_temp);
-            }
+      while (changeTemp > 0) {
+        if (resultTemp !== '') {
+          resultTemp += ' + '
         }
+        resultTemp += arr2[i]
+        changeTemp -= arr2[i]
+
+        if (changeTemp > 0) {
+          changeCalculator(changeTemp, i + 1, resultTemp)
+        }
+      }
+
+      if (changeTemp === 0) {
+        console.log(resultTemp)
+      }
     }
-    changeCalculator(change, 0, "");
+  }
+  changeCalculator(change, 0, '')
 }
 
-document.getElementById('submit3').addEventListener('click', task3);
+document.getElementById('submit3').addEventListener('click', task3)
